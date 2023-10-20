@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
-import org.delivery.db.enums.UserStatus;
+import org.delivery.db.user.enums.UserStatus;
 
 
 import javax.persistence.*;

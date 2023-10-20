@@ -1,14 +1,13 @@
-package org.delivery.db.enums;
+package org.delivery.db.store.enums;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public enum UserStatus {
+public enum StoreStatus {
 
     REGISTERED("등록"),
-
     UNREGISTERED("해지"),
     ;
 
-    private final String description;
+    private String description;
 }

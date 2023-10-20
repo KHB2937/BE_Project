@@ -4,12 +4,11 @@ import lombok.RequiredArgsConstructor;
 import org.delivery.api.common.error.ErrorCode;
 import org.delivery.api.common.error.UserErrorCode;
 import org.delivery.api.common.exception.ApiException;
-import org.delivery.db.enums.UserStatus;
+import org.delivery.db.user.enums.UserStatus;
 import org.delivery.db.user.UserEntity;
 import org.delivery.db.user.UserRepository;
 import org.springframework.stereotype.Service;
 
-import javax.swing.plaf.PanelUI;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
