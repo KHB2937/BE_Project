@@ -13,7 +13,10 @@ import java.util.List;
 public class UserOrderConverter {
 
     // 사용자와 가게 메뉴 목록으로부터 사용자 주문 엔티티를 생성하는 메서드
-    public UserOrderEntity toEntity(User user, List<StoreMenuEntity> storeMenuEntityList) {
+    public UserOrderEntity toEntity(User user, Long storeId,List<StoreMenuEntity> storeMenuEntityList) {
+
+
+
         // 가게 메뉴 목록에서 각 메뉴의 가격을 가져와 총 금액 계산
         var totalAmount = storeMenuEntityList.stream()
                 .map(it -> it.getAmount())
@@ -22,6 +25,7 @@ public class UserOrderConverter {
         // 사용자 주문 엔티티를 생성하고 필드를 설정
         return UserOrderEntity.builder()
                 .userId(user.getId())
+                .storeId(storeId)
                 .amount(totalAmount)
                 .build();
     }
